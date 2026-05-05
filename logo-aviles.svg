@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">Aviles Pest Control Logo</title>
+  <desc id="desc">Green shield logo with APC initials for Aviles Pest Control.</desc>
+  <defs>
+    <linearGradient id="g" x1="52" y1="28" x2="204" y2="226" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#7ec94a"/>
+      <stop offset="0.45" stop-color="#2da05f"/>
+      <stop offset="1" stop-color="#0f5233"/>
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" rx="56" fill="#0f2018"/>
+  <path d="M128 25 205 56v61c0 52-31 94-77 115-46-21-77-63-77-115V56l77-31Z" fill="url(#g)"/>
+  <path d="M128 43 188 67v48c0 40-23 73-60 91-37-18-60-51-60-91V67l60-24Z" fill="none" stroke="#e8f7df" stroke-width="8"/>
+  <path d="M89 153h16l5-14h36l5 14h17l-32-76h-14l-29 76Zm27-29 12-32 12 32h-24Z" fill="#fff"/>
+  <path d="M87 169c14 10 28 15 42 15 13 0 27-5 41-15" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round"/>
+  <circle cx="76" cy="77" r="8" fill="#fff"/>
+  <circle cx="180" cy="77" r="8" fill="#fff"/>
+</svg>

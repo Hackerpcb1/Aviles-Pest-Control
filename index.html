@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es" data-theme="light">
 <head>
 <meta charset="UTF-8"/>
@@ -9,329 +9,59 @@
 <meta property="og:title" content="Avilés Pest Control – Puerto Rico"/>
 <meta property="og:description" content="Control de plagas profesional en toda la isla de Puerto Rico."/>
 <meta property="og:type" content="website"/>
+<link rel="icon" type="image/png" href="galeria/image1.png"/>
+<link rel="apple-touch-icon" href="galeria/image1.png"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
-<style>
-:root {
-  --green: #1a7a4a;
-  --green-dark: #0f5233;
-  --green-light: #2da05f;
-  --lime: #7ec94a;
-  --gold: #d4a017;
-  --bg: #f5f7f2;
-  --bg2: #eaede4;
-  --card: #ffffff;
-  --text: #1a1f18;
-  --text2: #4a5544;
-  --border: #d0d8c8;
-  --shadow: rgba(26,122,74,0.12);
-  --hero-gradient: linear-gradient(135deg, #0f5233 0%, #1a7a4a 50%, #2da05f 100%);
-  --radius: 16px;
-  --radius-sm: 8px;
-  --transition: 0.3s cubic-bezier(0.4,0,0.2,1);
-}
-[data-theme="dark"] {
-  --bg: #0d1510;
-  --bg2: #141f18;
-  --card: #1a2620;
-  --text: #e8ede3;
-  --text2: #9aab94;
-  --border: #2a3d30;
-  --shadow: rgba(0,0,0,0.4);
-  --hero-gradient: linear-gradient(135deg, #081209 0%, #0f2018 50%, #0f5233 100%);
-}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;font-size:16px}
-body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;transition:background var(--transition),color var(--transition);overflow-x:hidden}
-
-/* ─── SCROLLBAR ─── */
-::-webkit-scrollbar{width:6px}
-::-webkit-scrollbar-track{background:var(--bg2)}
-::-webkit-scrollbar-thumb{background:var(--green);border-radius:3px}
-
-/* ─── HEADER ─── */
-header{position:fixed;top:0;left:0;right:0;z-index:1000;padding:0 5%;height:70px;display:flex;align-items:center;justify-content:space-between;background:rgba(15,82,51,0.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,0.08);transition:all var(--transition)}
-[data-theme="dark"] header{background:rgba(8,18,9,0.95)}
-.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
-.logo-icon{width:42px;height:42px;background:var(--lime);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;transition:transform var(--transition)}
-.logo:hover .logo-icon{transform:rotate(-8deg) scale(1.05)}
-.logo-text{color:#fff;font-family:'Syne',sans-serif;font-weight:800;font-size:1.15rem;line-height:1.1}
-.logo-text span{color:var(--lime);font-size:0.7rem;font-weight:400;display:block;letter-spacing:2px;text-transform:uppercase}
-nav{display:flex;align-items:center;gap:6px}
-nav a{color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.88rem;font-weight:500;padding:6px 12px;border-radius:var(--radius-sm);transition:all var(--transition)}
-nav a:hover{color:#fff;background:rgba(255,255,255,0.1)}
-.nav-cta{background:var(--lime)!important;color:#0f2018!important;font-weight:700!important;padding:8px 18px!important}
-.nav-cta:hover{background:#96d95e!important;transform:translateY(-1px)}
-.hamburger{display:flex;flex-direction:column;gap:5px;cursor:pointer;padding:8px;border-radius:8px;background:rgba(255,255,255,0.1);border:none}
-.hamburger span{width:22px;height:2px;background:#fff;border-radius:2px;transition:all var(--transition)}
-.header-actions{display:flex;align-items:center;gap:8px}
-.dropdown{position:relative}
-.dropdown-menu{position:absolute;top:calc(100% + 8px);right:0;min-width:220px;background:rgba(8,18,9,0.98);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius);padding:8px;display:none;flex-direction:column;box-shadow:0 10px 40px rgba(0,0,0,0.4)}
-.dropdown-menu.open{display:flex}
-.dropdown-section{padding:8px 12px}
-.dropdown-title{font-size:0.75rem;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
-.dropdown-toggle{display:flex;align-items:center;justify-content:space-between;cursor:pointer}
-.dropdown-toggle span{color:#fff;font-size:0.95rem}
-.dropdown-toggle input{opacity:0;width:0;height:0}
-.dropdown-toggle .toggle-slider{position:relative;width:44px;height:24px;background:rgba(255,255,255,0.2);border-radius:12px;flex-shrink:0}
-.dropdown-toggle .toggle-slider::before{content:'';position:absolute;width:18px;height:18px;top:3px;left:3px;background:#fff;border-radius:50%;transition:var(--transition)}
-.dropdown-toggle input:checked + .toggle-slider{background:var(--lime)}
-.dropdown-toggle input:checked + .toggle-slider::before{transform:translateX(20px);background:#0f2018}
-.dropdown-toggle-row{display:flex;align-items:center;justify-content:space-between;margin-top:8px}
-.dropdown-toggle-row span{color:#fff;font-size:0.9rem}
-.switch{position:relative;display:inline-block;width:44px;height:24px;flex-shrink:0}
-.switch input{opacity:0;width:0;height:0}
-.switch .slider{position:absolute;cursor:pointer;inset:0;background:rgba(255,255,255,0.2);border-radius:24px;transition:0.3s}
-.switch .slider::before{content:'';position:absolute;height:18px;width:18px;left:3px;bottom:3px;background:#fff;border-radius:50%;transition:0.3s}
-.switch input:checked + .slider{background:var(--lime)}
-.switch input:checked + .slider::before{transform:translateX(20px);background:#0f2018}
-.dropdown-divider{height:1px;background:rgba(255,255,255,0.1);margin:4px 0}
-.dropdown-item{background:none;border:none;color:#fff;font-size:0.95rem;padding:12px;text-align:left;border-radius:var(--radius-sm);cursor:pointer;transition:var(--transition)}
-.dropdown-item:hover{background:rgba(255,255,255,0.1);color:var(--lime)}
-
-/* ─── MOBILE MENU ─── */
-.mobile-menu{display:none;position:fixed;top:70px;left:0;right:0;bottom:0;background:rgba(8,18,9,0.97);z-index:999;flex-direction:column;padding:40px 8%;gap:8px;overflow-y:auto;transform:translateX(100%);transition:transform 0.4s cubic-bezier(0.4,0,0.2,1)}
-.mobile-menu.open{transform:translateX(0)}
-.mobile-menu a,.mobile-menu button.menu-btn{display:block;color:#fff;text-decoration:none;font-family:'Syne',sans-serif;font-size:1.5rem;font-weight:700;padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.08);background:none;border-left:none;border-right:none;border-top:none;cursor:pointer;text-align:left;transition:color var(--transition)}
-.mobile-menu a:hover,.mobile-menu button.menu-btn:hover{color:var(--lime)}
-.mobile-menu .menu-divider{margin:16px 0;font-size:0.7rem;letter-spacing:3px;color:rgba(255,255,255,0.3);text-transform:uppercase}
-.toggle-row{display:flex;align-items:center;justify-content:space-between;padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.08)}
-.toggle-row span{color:#fff;font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:600}
-.toggle{position:relative;width:52px;height:28px;cursor:pointer}
-.toggle input{opacity:0;width:0;height:0}
-.toggle-slider{position:absolute;inset:0;background:rgba(255,255,255,0.2);border-radius:14px;transition:var(--transition)}
-.toggle-slider::before{content:'';position:absolute;width:22px;height:22px;top:3px;left:3px;background:#fff;border-radius:50%;transition:var(--transition)}
-.toggle input:checked+.toggle-slider{background:var(--lime)}
-.toggle input:checked+.toggle-slider::before{transform:translateX(24px);background:#0f2018}
-
-/* ─── HERO ─── */
-#inicio{min-height:100vh;background:var(--hero-gradient);display:flex;align-items:center;position:relative;overflow:hidden;padding-top:70px}
-.hero-bg{position:absolute;inset:0;overflow:hidden;pointer-events:none}
-.hero-circle{position:absolute;border-radius:50%;background:rgba(126,201,74,0.08)}
-.hero-circle:nth-child(1){width:700px;height:700px;top:-200px;right:-200px}
-.hero-circle:nth-child(2){width:400px;height:400px;bottom:-100px;left:-100px;background:rgba(255,255,255,0.04)}
-.hero-dots{position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,0.06) 1px,transparent 1px);background-size:30px 30px}
-.hero-content{position:relative;z-index:2;max-width:1100px;margin:0 auto;padding:80px 5%;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
-.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(126,201,74,0.15);border:1px solid rgba(126,201,74,0.3);color:var(--lime);font-size:0.78rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;padding:6px 14px;border-radius:50px;margin-bottom:24px;animation:fadeUp 0.6s ease both}
-.hero-badge::before{content:'●';font-size:8px;animation:pulse 2s infinite}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.3}}
-h1{font-family:'Syne',sans-serif;font-size:clamp(2.2rem,4.5vw,3.6rem);font-weight:800;color:#fff;line-height:1.1;margin-bottom:20px;animation:fadeUp 0.7s ease 0.1s both}
-h1 em{color:var(--lime);font-style:normal}
-.hero-sub{font-size:1.05rem;color:rgba(255,255,255,0.75);max-width:480px;margin-bottom:36px;line-height:1.7;animation:fadeUp 0.7s ease 0.2s both}
-.hero-btns{display:flex;gap:14px;flex-wrap:wrap;animation:fadeUp 0.7s ease 0.3s both}
-.btn-primary{background:var(--lime);color:#0a1f10;font-family:'Syne',sans-serif;font-weight:700;font-size:0.95rem;padding:14px 28px;border-radius:50px;border:none;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:all var(--transition);box-shadow:0 4px 20px rgba(126,201,74,0.35)}
-.btn-primary:hover{background:#96d95e;transform:translateY(-2px);box-shadow:0 8px 30px rgba(126,201,74,0.45)}
-.btn-outline{background:transparent;color:#fff;font-family:'Syne',sans-serif;font-weight:600;font-size:0.95rem;padding:14px 28px;border-radius:50px;border:2px solid rgba(255,255,255,0.3);cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:all var(--transition)}
-.btn-outline:hover{border-color:#fff;background:rgba(255,255,255,0.1)}
-.hero-stats{display:flex;gap:32px;margin-top:40px;animation:fadeUp 0.7s ease 0.4s both}
-.stat{text-align:left}
-.stat-num{font-family:'Syne',sans-serif;font-size:2rem;font-weight:800;color:var(--lime)}
-.stat-label{font-size:0.78rem;color:rgba(255,255,255,0.6);text-transform:uppercase;letter-spacing:1px}
-.hero-visual{display:flex;flex-direction:column;gap:16px;animation:fadeUp 0.8s ease 0.3s both}
-.hero-card{background:rgba(255,255,255,0.08);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.12);border-radius:var(--radius);padding:20px;transition:transform var(--transition)}
-.hero-card:hover{transform:translateX(-4px)}
-.hero-card-icon{font-size:2rem;margin-bottom:8px}
-.hero-card h3{color:#fff;font-family:'Syne',sans-serif;font-weight:700;font-size:1rem;margin-bottom:4px}
-.hero-card p{color:rgba(255,255,255,0.6);font-size:0.82rem}
-@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
-
-/* ─── SECTIONS ─── */
-section{padding:90px 5%}
-.section-inner{max-width:1100px;margin:0 auto}
-.section-tag{display:inline-block;background:rgba(26,122,74,0.1);color:var(--green);font-size:0.72rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;padding:6px 14px;border-radius:50px;margin-bottom:12px;border:1px solid rgba(26,122,74,0.2)}
-[data-theme="dark"] .section-tag{background:rgba(126,201,74,0.1);color:var(--lime);border-color:rgba(126,201,74,0.2)}
-h2{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(1.8rem,3.5vw,2.8rem);color:var(--text);line-height:1.15;margin-bottom:12px}
-h2 em{color:var(--green);font-style:normal}
-[data-theme="dark"] h2 em{color:var(--lime)}
-.section-lead{font-size:1.05rem;color:var(--text2);max-width:560px;line-height:1.7;margin-bottom:48px}
-
-/* ─── SERVICIOS ─── */
-#servicios{background:var(--bg)}
-.services-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:20px;margin-bottom:56px}
-.service-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:28px 22px;text-align:center;transition:all var(--transition);cursor:default;box-shadow:0 2px 12px var(--shadow)}
-.service-card:hover{border-color:var(--green);transform:translateY(-6px);box-shadow:0 12px 30px var(--shadow)}
-.service-icon{font-size:2.4rem;margin-bottom:14px;display:block}
-.service-card h3{font-family:'Syne',sans-serif;font-weight:700;font-size:1rem;color:var(--text);margin-bottom:6px}
-.service-card p{font-size:0.82rem;color:var(--text2)}
-.plagas-title{font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:700;color:var(--text);margin-bottom:24px}
-.plagas-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:14px}
-.plaga-item{display:flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--border);border-radius:var(--radius-sm);padding:14px 16px;font-size:0.88rem;font-weight:500;color:var(--text);transition:all var(--transition)}
-.plaga-item:hover{border-color:var(--green-light);color:var(--green);background:rgba(26,122,74,0.04)}
-[data-theme="dark"] .plaga-item:hover{color:var(--lime)}
-.plaga-icon{font-size:1.4rem;flex-shrink:0}
-
-/* ─── NOSOTROS ─── */
-#nosotros{background:var(--bg2)}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
-.about-visual{position:relative}
-.about-map-wrap{background:var(--green-dark);border-radius:var(--radius);overflow:hidden;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;position:relative}
-.about-map-wrap svg{width:85%;height:85%;opacity:0.9}
-.about-badge{position:absolute;bottom:20px;right:20px;background:var(--lime);color:#0a1f10;font-family:'Syne',sans-serif;font-weight:800;font-size:0.85rem;padding:10px 16px;border-radius:10px;text-align:center;box-shadow:0 4px 16px rgba(0,0,0,0.2)}
-.mv-cards{display:grid;gap:16px;margin-top:28px}
-.mv-card{background:var(--card);border-left:4px solid var(--green);border-radius:var(--radius-sm);padding:20px 22px;box-shadow:0 2px 12px var(--shadow)}
-[data-theme="dark"] .mv-card{border-color:var(--lime)}
-.mv-card h4{font-family:'Syne',sans-serif;font-weight:700;color:var(--green);margin-bottom:6px;font-size:0.9rem;text-transform:uppercase;letter-spacing:1px}
-[data-theme="dark"] .mv-card h4{color:var(--lime)}
-.mv-card p{font-size:0.9rem;color:var(--text2)}
-
-/* ─── TESTIMONIOS ─── */
-#testimonios{background:var(--bg)}
-.testimonials-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:24px}
-.testimonial-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:28px;box-shadow:0 2px 12px var(--shadow);transition:transform var(--transition)}
-.testimonial-card:hover{transform:translateY(-4px)}
-.stars{color:var(--gold);font-size:1.1rem;margin-bottom:14px;letter-spacing:2px}
-.testimonial-text{font-size:0.95rem;color:var(--text2);font-style:italic;line-height:1.7;margin-bottom:20px}
-.testimonial-author{display:flex;align-items:center;gap:12px}
-.author-avatar{width:42px;height:42px;border-radius:50%;background:var(--hero-gradient);display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Syne',sans-serif;font-weight:800;font-size:1rem;flex-shrink:0}
-.author-name{font-family:'Syne',sans-serif;font-weight:700;font-size:0.95rem;color:var(--text)}
-.author-place{font-size:0.78rem;color:var(--text2)}
-
-/* ─── CONTACTO ─── */
-#contacto{background:var(--bg2)}
-.contact-grid{display:grid;grid-template-columns:1fr 1.5fr;gap:56px;align-items:start}
-.contact-info h3{font-family:'Syne',sans-serif;font-size:1.4rem;font-weight:700;margin-bottom:20px}
-.contact-items{display:flex;flex-direction:column;gap:16px;margin-bottom:32px}
-.contact-item{display:flex;align-items:flex-start;gap:14px}
-.contact-item-icon{width:40px;height:40px;background:rgba(26,122,74,0.1);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
-[data-theme="dark"] .contact-item-icon{background:rgba(126,201,74,0.1)}
-.contact-item-label{font-size:0.75rem;font-weight:600;color:var(--text2);text-transform:uppercase;letter-spacing:1px;margin-bottom:2px}
-.contact-item-value{font-weight:500;color:var(--text);font-size:0.95rem}
-.contact-item-value a{color:var(--green);text-decoration:none}
-[data-theme="dark"] .contact-item-value a{color:var(--lime)}
-form{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:36px;box-shadow:0 4px 20px var(--shadow)}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.form-group{margin-bottom:18px}
-label{display:block;font-size:0.82rem;font-weight:600;color:var(--text2);margin-bottom:6px;text-transform:uppercase;letter-spacing:0.5px}
-input,select,textarea{width:100%;background:var(--bg);border:1.5px solid var(--border);border-radius:var(--radius-sm);padding:12px 14px;font-family:'DM Sans',sans-serif;font-size:0.95rem;color:var(--text);transition:border-color var(--transition),box-shadow var(--transition);outline:none}
-input:focus,select:focus,textarea:focus{border-color:var(--green);box-shadow:0 0 0 3px rgba(26,122,74,0.12)}
-[data-theme="dark"] input,[data-theme="dark"] select,[data-theme="dark"] textarea{background:var(--bg2)}
-textarea{resize:vertical;min-height:110px}
-select option{background:var(--card);color:var(--text)}
-.form-submit{width:100%;background:var(--green);color:#fff;font-family:'Syne',sans-serif;font-weight:700;font-size:1rem;padding:15px;border:none;border-radius:var(--radius-sm);cursor:pointer;transition:all var(--transition);margin-top:6px}
-.form-submit:hover{background:var(--green-light);transform:translateY(-2px)}
-.form-success{display:none;background:rgba(126,201,74,0.1);border:1px solid var(--lime);border-radius:var(--radius-sm);padding:18px;text-align:center;color:var(--green);font-weight:600;margin-top:16px}
-[data-theme="dark"] .form-success{color:var(--lime)}
-
-/* ─── MAPA ─── */
-#mapa{background:var(--green-dark);padding:70px 5%;text-align:center}
-#mapa h2{color:#fff}
-#mapa h2 em{color:var(--lime)}
-#mapa .section-tag{background:rgba(126,201,74,0.15);color:var(--lime);border-color:rgba(126,201,74,0.25)}
-#mapa .section-lead{color:rgba(255,255,255,0.7);margin:0 auto 40px}
-.map-container{max-width:700px;margin:0 auto;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius);overflow:hidden;padding:30px;position:relative}
-.pr-map svg{width:100%;height:auto;filter:drop-shadow(0 4px 20px rgba(0,0,0,0.4))}
-.map-label{margin-top:20px;color:rgba(255,255,255,0.7);font-size:0.88rem;display:flex;align-items:center;justify-content:center;gap:8px}
-.map-label::before{content:'';width:10px;height:10px;background:var(--lime);border-radius:50%;animation:pulse 2s infinite}
-
-/* ─── FAQ ─── */
-#faq{background:var(--bg)}
-.faq-list{max-width:720px;display:flex;flex-direction:column;gap:12px}
-.faq-item{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-sm);overflow:hidden;transition:border-color var(--transition)}
-.faq-item.open{border-color:var(--green)}
-[data-theme="dark"] .faq-item.open{border-color:var(--lime)}
-.faq-q{width:100%;background:none;border:none;padding:20px 22px;display:flex;align-items:center;justify-content:space-between;cursor:pointer;font-family:'Syne',sans-serif;font-weight:600;font-size:1rem;color:var(--text);text-align:left;gap:16px}
-.faq-arrow{width:24px;height:24px;background:var(--bg2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.8rem;flex-shrink:0;transition:all var(--transition);color:var(--green)}
-[data-theme="dark"] .faq-arrow{color:var(--lime)}
-.faq-item.open .faq-arrow{background:var(--green);color:#fff;transform:rotate(180deg)}
-[data-theme="dark"] .faq-item.open .faq-arrow{background:var(--lime);color:#0a1f10}
-.faq-a{max-height:0;overflow:hidden;transition:max-height 0.4s cubic-bezier(0.4,0,0.2,1),padding 0.3s}
-.faq-a p{padding:0 22px 20px;font-size:0.92rem;color:var(--text2);line-height:1.7}
-.faq-item.open .faq-a{max-height:300px}
-
-/* ─── FOOTER ─── */
-footer{background:#040d06;color:rgba(255,255,255,0.75);padding:60px 5% 30px}
-.footer-inner{max-width:1100px;margin:0 auto}
-.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px;margin-bottom:40px}
-.footer-brand .logo-text{font-size:1.2rem}
-.footer-brand p{font-size:0.88rem;line-height:1.7;color:rgba(255,255,255,0.55);margin-top:12px;max-width:280px}
-.footer-col h4{font-family:'Syne',sans-serif;font-weight:700;color:#fff;margin-bottom:16px;font-size:0.95rem}
-.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:8px}
-.footer-col ul li a{color:rgba(255,255,255,0.55);text-decoration:none;font-size:0.88rem;transition:color var(--transition)}
-.footer-col ul li a:hover{color:var(--lime)}
-.footer-col ul li{color:rgba(255,255,255,0.55);font-size:0.88rem}
-.social-links{display:flex;gap:10px;margin-top:16px}
-.social-link{width:38px;height:38px;background:rgba(255,255,255,0.08);border-radius:8px;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:1rem;transition:all var(--transition);color:#fff}
-.social-link:hover{background:var(--green-light);transform:translateY(-2px)}
-.footer-bottom{border-top:1px solid rgba(255,255,255,0.08);padding-top:24px;display:flex;align-items:center;justify-content:space-between;font-size:0.82rem;color:rgba(255,255,255,0.35);flex-wrap:gap}
-.footer-bottom a{color:var(--lime);text-decoration:none}
-
-/* ─── DASHBOARD ─── */
-.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.85);z-index:2000;align-items:center;justify-content:center;padding:20px}
-.modal-overlay.open{display:flex}
-.modal{background:var(--card);border-radius:var(--radius);max-width:900px;width:100%;max-height:90vh;overflow-y:auto;box-shadow:0 20px 60px rgba(0,0,0,0.5)}
-.modal-header{padding:24px 28px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
-.modal-header h2{font-size:1.3rem;margin:0}
-.modal-close{background:none;border:none;font-size:1.4rem;cursor:pointer;color:var(--text2);padding:4px;border-radius:6px;transition:all var(--transition)}
-.modal-close:hover{color:var(--text);background:var(--bg2)}
-.modal-body{padding:28px}
-
-/* Login */
-.login-form{max-width:360px;margin:0 auto}
-.login-form h3{font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:700;margin-bottom:20px;text-align:center}
-.login-error{color:#e05050;font-size:0.85rem;text-align:center;margin-top:10px;display:none}
-.btn-green{background:var(--green);color:#fff;font-family:'Syne',sans-serif;font-weight:700;padding:13px 20px;border:none;border-radius:var(--radius-sm);cursor:pointer;width:100%;font-size:0.95rem;margin-top:8px;transition:all var(--transition)}
-.btn-green:hover{background:var(--green-light)}
-
-/* Dashboard UI */
-.dash-nav{display:flex;gap:8px;margin-bottom:28px;flex-wrap:wrap}
-.dash-nav button{padding:8px 16px;border-radius:var(--radius-sm);border:1.5px solid var(--border);background:none;cursor:pointer;font-family:'DM Sans',sans-serif;font-weight:500;color:var(--text2);transition:all var(--transition);font-size:0.88rem}
-.dash-nav button.active{border-color:var(--green);background:rgba(26,122,74,0.08);color:var(--green)}
-[data-theme="dark"] .dash-nav button.active{border-color:var(--lime);background:rgba(126,201,74,0.08);color:var(--lime)}
-.dash-panel{display:none}
-.dash-panel.active{display:block}
-.dash-section{background:var(--bg2);border-radius:var(--radius-sm);padding:20px;margin-bottom:20px}
-.dash-section h4{font-family:'Syne',sans-serif;font-weight:700;font-size:0.95rem;color:var(--text);margin-bottom:14px}
-.dash-row{display:flex;gap:10px;align-items:flex-end;flex-wrap:wrap}
-.dash-row input{flex:1;min-width:200px}
-.btn-sm{background:var(--green);color:#fff;border:none;border-radius:var(--radius-sm);padding:10px 16px;cursor:pointer;font-family:'Syne',sans-serif;font-weight:600;font-size:0.85rem;transition:all var(--transition)}
-.btn-sm:hover{background:var(--green-light)}
-.btn-danger{background:#c0392b}
-.btn-danger:hover{background:#e74c3c}
-.item-list{display:flex;flex-direction:column;gap:8px;margin-top:12px}
-.item-row{display:flex;align-items:center;justify-content:space-between;background:var(--card);border:1px solid var(--border);border-radius:var(--radius-sm);padding:10px 14px;font-size:0.88rem}
-.item-row span{color:var(--text);flex:1}
-.item-actions{display:flex;gap:6px}
-.dash-save-msg{color:var(--green);font-size:0.85rem;font-weight:600;margin-top:8px;display:none}
-[data-theme="dark"] .dash-save-msg{color:var(--lime)}
-
-/* scroll reveal */
-.reveal{opacity:0;transform:translateY(30px);transition:opacity 0.6s ease,transform 0.6s ease}
-.reveal.visible{opacity:1;transform:none}
-
-/* ─── RESPONSIVE ─── */
-@media(max-width:900px){
-  nav{display:none}
-  .mobile-menu{display:flex}
-  .hero-content{grid-template-columns:1fr;gap:40px;padding:60px 5%}
-  .hero-visual{flex-direction:row;overflow-x:auto}
-  .hero-card{min-width:200px}
-  .about-grid{grid-template-columns:1fr}
-  .contact-grid{grid-template-columns:1fr}
-  .footer-grid{grid-template-columns:1fr 1fr;gap:32px}
-}
-@media(max-width:600px){
-  section{padding:60px 5%}
-  .form-row{grid-template-columns:1fr}
-  .footer-grid{grid-template-columns:1fr}
-  .hero-stats{gap:20px}
-  .testimonials-grid{grid-template-columns:1fr}
-  form{padding:22px}
-  .footer-bottom{flex-direction:column;gap:8px;text-align:center}
-}
-</style>
+<link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
+<div class="help-modal-overlay" id="helpModalOverlay" aria-hidden="true">
+  <div class="help-modal-card" role="dialog" aria-modal="true" aria-labelledby="helpModalTitle">
+    <button class="help-modal-close" id="helpModalClose" aria-label="Cerrar">×</button>
+    <div class="help-modal-content">
+      <div class="help-modal-header">
+        <div class="help-modal-badge">🚨</div>
+        <div>
+          <h2 id="helpModalTitle">¿Necesitas ayuda con una plaga?</h2>
+          <p>Selecciona tu problema y recibe orientación rápida:</p>
+        </div>
+      </div>
+      <div class="help-modal-brand">
+        <div class="help-modal-logo"><img src="galeria/image1.png" alt="Avilés Pest Control logo"/></div>
+        <div class="help-modal-brand-copy">
+          <span>Avilés Pest Control</span>
+          <small>Servicio en Puerto Rico</small>
+        </div>
+      </div>
+      <div class="help-issue-grid">
+        <button type="button" class="help-issue-btn active" data-issue="Cucarachas">🪳 Cucarachas</button>
+        <button type="button" class="help-issue-btn" data-issue="Hormigas">🐜 Hormigas</button>
+        <button type="button" class="help-issue-btn" data-issue="Roedores">🐭 Roedores</button>
+        <button type="button" class="help-issue-btn" data-issue="Mosquitos">🦟 Mosquitos</button>
+        <button type="button" class="help-issue-btn" data-issue="Otro">🏠 Otro</button>
+      </div>
+      <div class="help-action-row">
+        <button type="button" class="btn-primary help-action-btn" id="helpRequestBtn">Solicitar Servicio</button>
+        <a href="tel:7872997512" class="btn-outline help-action-btn">Llamar Ahora</a>
+        <a href="https://wa.me/17872997512?text=Hola,%20tengo%20un%20problema%20con%20una%20plaga%20y%20necesito%20ayuda" class="btn-outline help-action-btn">WhatsApp</a>
+      </div>
+      <p class="help-modal-footer">Avilés Pest Control | Servicio en Puerto Rico</p>
+    </div>
+  </div>
+</div>
 
 <!-- ─── HEADER ─── -->
 <header>
   <a class="logo" href="#inicio">
-    <div class="logo-icon">🛡️</div>
+    <div class="logo-icon"><img src="galeria/image1.png" alt="Logo Avilés Pest Control"/></div>
     <div class="logo-text">Avilés Pest Control<span>Puerto Rico</span></div>
   </a>
   <nav>
     <a href="#inicio">Inicio</a>
     <a href="#servicios">Servicios</a>
     <a href="#nosotros">Nosotros</a>
+    <a href="#galeria">Galería</a>
     <a href="#testimonios">Testimonios</a>
     <a href="#faq">FAQ</a>
     <a href="#contacto" class="nav-cta">Solicitar Servicio →</a>
@@ -363,7 +93,7 @@ footer{background:#040d06;color:rgba(255,255,255,0.75);padding:60px 5% 30px}
           </div>
         </div>
         <div class="dropdown-divider"></div>
-        <button class="dropdown-item" id="dashBtn">⚙️ Panel de Administración</button>
+        <a class="dropdown-item" href="dashboard.html">⚙️ Panel de Administración</a>
       </div>
     </div>
   </div>
@@ -374,6 +104,7 @@ footer{background:#040d06;color:rgba(255,255,255,0.75);padding:60px 5% 30px}
   <a href="#inicio" class="menu-link">Inicio</a>
   <a href="#servicios" class="menu-link">Servicios</a>
   <a href="#nosotros" class="menu-link">Nosotros</a>
+  <a href="#galeria" class="menu-link">Galería</a>
   <a href="#testimonios" class="menu-link">Testimonios</a>
   <a href="#faq" class="menu-link">FAQ</a>
   <a href="#contacto" class="menu-link">Solicitar Servicio</a>
@@ -392,7 +123,7 @@ footer{background:#040d06;color:rgba(255,255,255,0.75);padding:60px 5% 30px}
       <span class="toggle-slider"></span>
     </label>
   </div>
-  <button class="menu-btn" id="dashBtnMobile">⚙️ Panel de Administración</button>
+  <a href="dashboard.html" class="menu-btn">⚙️ Panel de Administración</a>
 </div>
 
 <!-- ─── HERO ─── -->
@@ -455,13 +186,13 @@ footer{background:#040d06;color:rgba(255,255,255,0.75);padding:60px 5% 30px}
     <div class="reveal">
       <p class="plagas-title">🎯 Plagas que eliminamos:</p>
       <div class="plagas-grid" id="plagasGrid">
-        <div class="plaga-item"><span class="plaga-icon">🪳</span> Cucarachas</div>
-        <div class="plaga-item"><span class="plaga-icon">🐜</span> Hormigas</div>
-        <div class="plaga-item"><span class="plaga-icon">🐭</span> Roedores</div>
-        <div class="plaga-item"><span class="plaga-icon">🪲</span> Comején / Termitas</div>
-        <div class="plaga-item"><span class="plaga-icon">🦟</span> Moscas y Mosquitos</div>
-        <div class="plaga-item"><span class="plaga-icon">🐾</span> Pulgas y Garrapatas</div>
-        <div class="plaga-item"><span class="plaga-icon">🦎</span> Salamandras e Iguanas</div>
+        <a class="plaga-item" href="plaga.html?tipo=cucarachas"><span class="plaga-icon">🪳</span> Cucarachas</a>
+        <a class="plaga-item" href="plaga.html?tipo=hormigas"><span class="plaga-icon">🐜</span> Hormigas</a>
+        <a class="plaga-item" href="plaga.html?tipo=roedores"><span class="plaga-icon">🐭</span> Roedores</a>
+        <a class="plaga-item" href="plaga.html?tipo=comejen"><span class="plaga-icon">🪲</span> Comején / Termitas</a>
+        <a class="plaga-item" href="plaga.html?tipo=moscas-mosquitos"><span class="plaga-icon">🦟</span> Moscas y Mosquitos</a>
+        <a class="plaga-item" href="plaga.html?tipo=pulgas-garrapatas"><span class="plaga-icon">🐾</span> Pulgas y Garrapatas</a>
+        <a class="plaga-item" href="plaga.html?tipo=salamandras-iguanas"><span class="plaga-icon">🦎</span> Salamandras e Iguanas</a>
       </div>
     </div>
   </div>
@@ -494,6 +225,37 @@ footer{background:#040d06;color:rgba(255,255,255,0.75);padding:60px 5% 30px}
           </iframe>
           <div class="about-badge">78 Municipios<br/>Cubiertos</div>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── VIDEO EMPRESA ─── -->
+<section id="video-empresa">
+  <div class="section-inner">
+    <div class="company-video-grid">
+      <div class="company-video-copy reveal">
+        <div class="section-tag">Conócenos</div>
+        <h2>Avilés Pest Control <em>en acción</em></h2>
+        <p class="section-lead">Muestra aquí un video corto de la compañía, tus técnicos, equipos, procesos de fumigación o trabajos realizados en Puerto Rico.</p>
+        <div class="video-highlights">
+          <div><span>✓</span> Técnicos profesionales</div>
+          <div><span>✓</span> Servicio residencial y comercial</div>
+          <div><span>✓</span> Cobertura en todo Puerto Rico</div>
+        </div>
+        <div class="hero-btns video-actions">
+          <a href="#contacto" class="btn-primary">Solicitar Servicio</a>
+          <a href="tel:7873138268" class="btn-outline">Llamar Ahora</a>
+        </div>
+      </div>
+      <div class="company-video-card reveal">
+        <div class="video-frame">
+          <video controls poster="galeria/image1.png">
+            <source src="video/Avilés_Pest_Control.mp4" type="video/mp4"/>
+            Tu navegador no soporta video HTML5.
+          </video>
+        </div>
+        <p class="video-note">Video corporativo de Avilés Pest Control.</p>
       </div>
     </div>
   </div>
@@ -655,20 +417,87 @@ footer{background:#040d06;color:rgba(255,255,255,0.75);padding:60px 5% 30px}
   </div>
 </section>
 
+<!-- ─── WHATSAPP FLOATING BUTTON ─── -->
+<a href="https://wa.me/17872997512?text=Hola,%20me%20gustar%C3%ADa%20solicitar%20informaci%C3%B3n%20sobre%20sus%20servicios%20de%20control%20de%20plagas" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+  <span class="whatsapp-icon">
+    <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+    </svg>
+  </span>
+  <span class="whatsapp-text">¡Escríbenos!</span>
+</a>
+
+<!-- ─── GALERÍA ─── -->
+<section id="galeria">
+  <div class="section-inner">
+    <div class="reveal">
+      <div class="section-tag">Nuestra Galería</div>
+      <h2>Trabajos <em>realizados</em></h2>
+      <p class="section-lead">Algunos de nuestros trabajos más recientes en control de plagas.</p>
+    </div>
+    <div class="slideshow-container reveal">
+      <div class="slideshow-wrapper">
+        <div class="slide active">
+          <img src="https://via.placeholder.com/800x500/1a7a4a/ffffff?text=Servicio+Residencial" alt="Servicio Residencial" loading="lazy"/>
+          <div class="slide-caption">
+            <h3>Servicio Residencial</h3>
+            <p>Control completo de plagas en hogar familiar</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="https://via.placeholder.com/800x500/2da05f/ffffff?text=Tratamiento+Comercial" alt="Tratamiento Comercial" loading="lazy"/>
+          <div class="slide-caption">
+            <h3>Tratamiento Comercial</h3>
+            <p>Fumigación en restaurante local</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="https://via.placeholder.com/800x500/7ec94a/ffffff?text=Control+de+Termitas" alt="Control de Termitas" loading="lazy"/>
+          <div class="slide-caption">
+            <h3>Control de Termitas</h3>
+            <p>Tratamiento especializado contra comején</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="https://via.placeholder.com/800x500/0f5233/ffffff?text=Servicio+de+Vehículos" alt="Servicio de Vehículos" loading="lazy"/>
+          <div class="slide-caption">
+            <h3>Servicio de Vehículos</h3>
+            <p>Fumigación completa de camper</p>
+          </div>
+        </div>
+      </div>
+      <button class="slide-nav prev" aria-label="Imagen anterior">‹</button>
+      <button class="slide-nav next" aria-label="Imagen siguiente">›</button>
+      <div class="slide-dots">
+        <span class="dot active" data-slide="0"></span>
+        <span class="dot" data-slide="1"></span>
+        <span class="dot" data-slide="2"></span>
+        <span class="dot" data-slide="3"></span>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ─── FOOTER ─── -->
 <footer>
   <div class="footer-inner">
     <div class="footer-grid">
       <div class="footer-brand">
         <a class="logo" href="#inicio">
-          <div class="logo-icon">🛡️</div>
+          <div class="logo-icon"><img src="galeria/image1.png" alt="Logo Avilés Pest Control"/></div>
           <div class="logo-text" style="color:#fff">Avilés Pest Control<span>Puerto Rico</span></div>
         </a>
         <p>Control de plagas profesional en toda la isla de Puerto Rico. Soluciones rápidas, seguras y garantizadas.</p>
         <div class="social-links">
-          <a class="social-link" href="https://facebook.com" target="_blank" aria-label="Facebook">f</a>
-          <a class="social-link" href="https://instagram.com" target="_blank" aria-label="Instagram">📸</a>
-          <a class="social-link" href="https://wa.me/17872997512" target="_blank" aria-label="WhatsApp">💬</a>
+          <a class="social-link" href="https://facebook.com" target="_blank" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8.4V6.9c0-.7.5-.9.9-.9H17V2.3c-.4-.1-1.8-.3-3.3-.3-3.3 0-5.5 2-5.5 5.6v.8H5v4.1h3.2V22h4.2v-9.5h3.2l.5-4.1H14Z"/></svg>
+          </a>
+          <a class="social-link" href="https://instagram.com" target="_blank" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4c0 3.2-2.6 5.8-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8C2 4.6 4.6 2 7.8 2Zm-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.4 5.6 20 7.6 20h8.8c2 0 3.6-1.6 3.6-3.6V7.6c0-2-1.6-3.6-3.6-3.6H7.6Zm9.7 1.8a1.3 1.3 0 1 1 0 2.6 1.3 1.3 0 0 1 0-2.6ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/></svg>
+          </a>
+          <a class="social-link" href="https://wa.me/17872997512" target="_blank" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a9.9 9.9 0 0 0-8.5 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3.1.8.8-3-.2-.3A8 8 0 1 1 12 20Zm4.4-5.9c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5L9.7 8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.1 0 1.2.9 2.4 1 2.6.1.2 1.8 2.8 4.4 3.9.6.3 1.1.4 1.5.5.6.2 1.2.2 1.6.1.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1-.2-.2-.4-.3-.8-.5Z"/></svg>
+          </a>
         </div>
       </div>
       <div class="footer-col">
@@ -693,558 +522,11 @@ footer{background:#040d06;color:rgba(255,255,255,0.75);padding:60px 5% 30px}
     </div>
     <div class="footer-bottom">
       <span>© 2026 Avilés Pest Control. Todos los derechos reservados.</span>
-      <button onclick="openDash()" style="background:none;border:none;color:rgba(255,255,255,0.3);cursor:pointer;font-size:0.75rem;transition:color 0.2s" onmouseover="this.style.color='#7ec94a'" onmouseout="this.style.color='rgba(255,255,255,0.3)'">⚙ Admin</button>
+      <a href="dashboard.html" style="background:none;border:none;color:rgba(255,255,255,0.3);cursor:pointer;font-size:0.75rem;transition:color 0.2s" onmouseover="this.style.color='#7ec94a'" onmouseout="this.style.color='rgba(255,255,255,0.3)'">⚙ Admin</a>
     </div>
   </div>
 </footer>
 
-<!-- ─── DASHBOARD MODAL ─── -->
-<div class="modal-overlay" id="dashModal">
-  <div class="modal">
-    <div class="modal-header">
-      <h2>⚙️ Panel de Administración</h2>
-      <button class="modal-close" onclick="closeDash()">✕</button>
-    </div>
-    <div class="modal-body">
-      <!-- LOGIN -->
-      <div id="loginPanel">
-        <div class="login-form">
-          <h3>🔐 Acceso Seguro</h3>
-          <div class="form-group"><label>Usuario</label><input type="text" id="loginUser" placeholder="admin"/></div>
-          <div class="form-group"><label>Contraseña</label><input type="password" id="loginPass" placeholder="••••••••"/></div>
-          <button class="btn-green" onclick="doLogin()">Entrar →</button>
-          <p class="login-error" id="loginErr">⚠️ Credenciales incorrectas</p>
-        </div>
-      </div>
-      <!-- DASHBOARD -->
-      <div id="dashPanel" style="display:none">
-        <div class="dash-nav">
-          <button class="active" onclick="showTab('contact')">📞 Contacto</button>
-          <button onclick="showTab('services')">🔧 Servicios</button>
-          <button onclick="showTab('testimonials')">⭐ Testimonios</button>
-          <button onclick="doLogout()" style="margin-left:auto;color:#e05050;border-color:#e05050">Cerrar Sesión</button>
-        </div>
-        <!-- Contact Tab -->
-        <div class="dash-panel active" id="tab-contact">
-          <div class="dash-section">
-            <h4>📞 Teléfonos</h4>
-            <div class="dash-row"><input type="tel" id="dash-tel1" value="787-299-7512"/><button class="btn-sm" onclick="saveTel()">Guardar</button></div>
-            <div class="dash-row" style="margin-top:10px"><input type="tel" id="dash-tel2" value="787-678-4889"/></div>
-            <p class="dash-save-msg" id="telSaveMsg">✅ Teléfonos actualizados</p>
-          </div>
-          <div class="dash-section">
-            <h4>✉️ Email</h4>
-            <div class="dash-row"><input type="email" id="dash-email" value="avilespestcontrol@gmail.com"/><button class="btn-sm" onclick="saveEmail()">Guardar</button></div>
-            <p class="dash-save-msg" id="emailSaveMsg">✅ Email actualizado</p>
-          </div>
-        </div>
-        <!-- Services Tab -->
-        <div class="dash-panel" id="tab-services">
-          <div class="dash-section">
-            <h4>Agregar Plaga / Servicio</h4>
-            <div class="dash-row"><input type="text" id="newPlaga" placeholder="Ej: Avispas"/><button class="btn-sm" onclick="addPlaga()">+ Agregar</button></div>
-            <div class="item-list" id="plagaList"></div>
-          </div>
-        </div>
-        <!-- Testimonials Tab -->
-        <div class="dash-panel" id="tab-testimonials">
-          <div class="dash-section">
-            <h4>Agregar Testimonio</h4>
-            <div class="form-group"><input type="text" id="newTestName" placeholder="Nombre del cliente"/></div>
-            <div class="form-group"><input type="text" id="newTestPlace" placeholder="Pueblo, PR"/></div>
-            <div class="form-group"><textarea id="newTestText" placeholder="Texto del testimonio..." style="min-height:80px"></textarea></div>
-            <button class="btn-sm" onclick="addTestimonial()">+ Agregar Testimonio</button>
-            <div class="item-list" id="testList"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<script>
-// ─── STATE ───
-const state = {
-  theme: localStorage.getItem('theme') || 'light',
-  lang: localStorage.getItem('lang') || 'es',
-  loggedIn: false,
-  plagas: ['Cucarachas','Hormigas','Roedores','Comején / Termitas','Moscas y Mosquitos','Pulgas y Garrapatas','Salamandras e Iguanas'],
-  testimonials: [
-    {name:'María Rodríguez',place:'San Juan, PR',text:'"Excelente servicio. Llegaron puntual, fueron muy profesionales y el resultado fue increíble. No hemos visto ni una cucaracha desde entonces. ¡100% recomendado!"'},
-    {name:'José López',place:'Bayamón, PR',text:'"Tenía un problema serio de comején en mi casa y Avilés Pest Control lo resolvió completamente. Muy profesionales, precios justos y excelente atención al cliente."'},
-    {name:'Carmen Nieves',place:'Ponce, PR',text:'"Llamé por una emergencia de roedores en mi restaurante y respondieron en pocas horas. Resolvieron el problema rápido y de forma discreta. Son los mejores de Puerto Rico."'},
-  ],
-  contact: {tel1:'787-299-7512', tel2:'787-678-4889', email:'avilespestcontrol@gmail.com'}
-};
-
-// ─── THEME ───
-function applyTheme(t) {
-  document.documentElement.setAttribute('data-theme', t);
-  localStorage.setItem('theme', t);
-  document.getElementById('themeToggleMobile').checked = (t==='dark');
-  document.querySelectorAll('.theme-toggle').forEach(el => el.checked = (t==='dark'));
-  document.querySelectorAll('.theme-label-text').forEach(el => el.textContent = t === 'dark' ? 'Modo Oscuro' : 'Modo Claro');
-}
-applyTheme(state.theme);
-document.getElementById('themeToggleMobile').addEventListener('change', e => applyTheme(e.target.checked?'dark':'light'));
-
-// ─── LANG ───
-const texts = {
-  es: {
-    hero_badge:'✦ Servicio Profesional Certificado', h1:'Protegemos tu <em>hogar y negocio</em> en todo Puerto Rico',
-    hero_sub:'Soluciones de control de plagas rápidas, seguras y efectivas. Residencial, comercial, autos, botes y campers en toda la isla.',
-    cta:'📋 Solicitar Servicio', call:'📞 Llamar Ahora', langLabel:'Español',
-    stat_clientes:'Clientes Satisfechos', stat_municipios:'Municipios', stat_atencion:'Atención',
-    
-    // Hero cards
-    card_residencial:'Residencial', card_residencial_sub:'Tu hogar libre de plagas',
-    card_comercial:'Comercial', card_comercial_sub:'Negocios protegidos',
-    card_autos:'Autos', card_autos_sub:'Vehículos libres de plagas',
-    card_botes:'Botes & Campers', card_botes_sub:'Embarcaciones protegidas',
-    
-    // Services
-    servicios_tag:'Nuestros Servicios', servicios:'Servicios', servicios_sub:'Soluciones para cada <em>necesidad</em>',
-    servicios_lead:'Ofrecemos servicios completos de fumigación y control de plagas para todo tipo de propiedad en Puerto Rico.',
-    servicio_residencial:'Residencial', servicio_residencial_sub:'Hogares y apartamentos',
-    servicio_comercial:'Comercial', servicio_comercial_sub:'Oficinas, restaurantes, tiendas',
-    servicio_autos:'Autos', servicio_autos_sub:'Interiores y exteriores',
-    servicio_botes:'Botes', servicio_botes_sub:'Embarcaciones de todo tipo',
-    servicio_campers:'Campers', servicio_campers_sub:'Vehículos recreativos',
-    plagas_title:'🎯 Plagas que eliminamos:',
-    plaga_cucarachas:'Cucarachas', plaga_hormigas:'Hormigas', plaga_roedores:'Roedores',
-    plaga_comejen:'Comején / Termitas', plaga_moscas:'Moscas y Mosquitos', plaga_pulgas:'Pulgas y Garrapatas', plaga_salamandras:'Salamandras e Iguanas',
-    
-    // About
-    nosotros_tag:'Sobre Nosotros', nosotros:'Nosotros', nosotros_sub:'Expertos en control de plagas <em>en toda la isla</em>',
-    nosotros_text1:'Avilés Pest Control es una empresa puertorriqueña dedicada a-brindar soluciones profesionales, seguras y efectivas de control de plagas. Atendemos los 78 municipios de Puerto Rico con rapidez y compromiso.',
-    nosotros_text2:'Contamos con técnicos certificados y productos aprobados que garantizan resultados duraderos sin comprometer la salud de tu familia o mascotas.',
-    mision:'🎯 Misión', mision_text:'Proteger la salud y tranquilidad de nuestros clientes brindando servicios de control de plagas confiables, responsables y accesibles en todo Puerto Rico.',
-    vision:'🌟 Visión', vision_text:'Ser la empresa líder en control de plagas en Puerto Rico, reconocida por la excelencia en servicio, la confianza de nuestros clientes y el compromiso con el ambiente.',
-    municipios_cubiertos:'78 Municipios<br/>Cubiertos',
-    
-    // Testimonials
-    testimonios_tag:'Testimonios', testimonios:'Lo que dicen nuestros clientes', testimonios_sub:'La satisfacción de nuestros clientes es nuestra mayor recompensa.',
-    testimonial_1_name:'María Rodríguez', testimonial_1_place:'San Juan, PR', testimonial_1_text:'"Excelente servicio. Llegaron puntual, fueron muy profesionales y el resultado fue increíble. No hemos visto ni una cucaracha desde entonces. ¡100% recomendado!"',
-    testimonial_2_name:'José López', testimonial_2_place:'Bayamón, PR', testimonial_2_text:'"Tenía un problema serio de comején en mi casa y Avilés Pest Control lo resolvió completamente. Muy profesionales, precios justos y excelente atención al cliente."',
-    testimonial_3_name:'Carmen Nieves', testimonial_3_place:'Ponce, PR', testimonial_3_text:'"Llamé por una emergencia de roedores en mi restaurante y respondieron en pocas horas. Resolvieron el problema rápido y de forma discreta. Son los mejores de Puerto Rico."',
-    
-    // FAQ
-    faq_tag:'FAQ', faq:'Preguntas frecuentes', faq_sub:'Aquí respondemos las dudas más comunes de nuestros clientes.',
-    faq1_q:'¿Cuánto tiempo dura el servicio?', faq1_r:'La mayoría de los tratamientos duran entre 30 minutos y 2 horas, dependiendo del tamaño de la propiedad y la plaga.',
-    faq2_q:'¿Los productos son seguros para mis mascotas?', faq2_r:'Sí, usamos productos biodegradables y seguros para mascotas. Después del tratamiento puedes regresar a tu hogar sin preocupaciones.',
-    faq3_q:'¿Ofrecen garantía?', faq3_r:'Sí, ofrecemos garantía en todos nuestros servicios. Si la plaga vuelve, regresamos sin costo adicional.',
-    faq4_q:'¿Cuánto cuesta una inspección?', faq4_r:'La primera inspección es gratuita. Llámanos y agenda tu cita hoy.',
-    
-    // Contact
-    contacto_tag:'Contacto', contacto:'Contacto', contacto_sub:'Escríbenos y te respondemos pronto',
-    form_nombre:'Tu Nombre', form_email:'Correo Electrónico', form_tel:'Teléfono',
-    form_servicio:'Tipo de Servicio', form_servicio_opt:'— Seleccionar servicio —',
-    form_pueblo:'Pueblo *', form_pueblo_opt:'— Seleccionar pueblo —',
-    form_mensaje:'Mensaje', form_enviar:'Enviar Solicitud →',
-    form_success:'✅ ¡Solicitud enviada! Nos comunicaremos contigo pronto.',
-    servicio_residencial_opt:'Residencial', servicio_comercial_opt:'Comercial', servicio_autos_opt:'Autos', servicio_botes_opt:'Botes / Campers',
-    
-    // Footer
-    footer_derechos:'© 2024 Avilés Pest Control. Todos los derechos reservados.',
-    cobertura_tag:'Cobertura', cobertura_h2:'Servicio en <em>todo Puerto Rico</em>', cobertura_lead:'Atendemos los 78 municipios de Puerto Rico incluyendo Vieques y Culebra.',
-    mapa_label:'Cobertura total: 78 municipios incluyendo Vieques y Culebra',
-    faq_lead:'Aquí respondemos las dudas más comunes de nuestros clientes.',
-    contacto_cobertura_label:'Cobertura', contacto_cobertura_value:'Toda la isla de Puerto Rico',
-    contacto_horario_label:'Horario', contacto_horario_value:'Lunes – Sábado: 7am – 7pm',
-    
-    // Form
-    form_alert:'Por favor completa los campos requeridos (*)', form_sending:'Enviando...', form_enviar_btn:'Enviar Solicitud →',
-    
-    // Navigation
-    nav_inicio:'Inicio', nav_servicios:'Servicios', nav_nosotros:'Nosotros', nav_testimonios:'Testimonios', nav_faq:'FAQ', nav_cta:'Solicitar Servicio →'
-  },
-  en: {
-    hero_badge:'✦ Certified Professional Service', h1:'We protect your <em>home & business</em> across Puerto Rico',
-    hero_sub:'Fast, safe and effective pest control solutions. Residential, commercial, cars, boats and campers across the island.',
-    cta:'📋 Request Service', call:'📞 Call Now', langLabel:'English',
-    stat_clientes:'Satisfied Clients', stat_municipios:'Municipalities', stat_atencion:'Attention',
-    
-    // Hero cards
-    card_residencial:'Residential', card_residencial_sub:'Your pest-free home',
-    card_comercial:'Commercial', card_comercial_sub:'Protected businesses',
-    card_autos:'Cars', card_autos_sub:'Pest-free vehicles',
-    card_botes:'Boats & Campers', card_botes_sub:'Protected vessels',
-    
-    // Services
-    servicios_tag:'Our Services', servicios:'Services', servicios_sub:'Solutions for every <em>need</em>',
-    servicios_lead:'We offer complete fumigation and pest control services for all types of properties in Puerto Rico.',
-    servicio_residencial:'Residential', servicio_residencial_sub:'Homes and apartments',
-    servicio_comercial:'Commercial', servicio_comercial_sub:'Offices, restaurants, stores',
-    servicio_autos:'Cars', servicio_autos_sub:'Interior and exterior',
-    servicio_botes:'Boats', servicio_botes_sub:'All types of vessels',
-    servicio_campers:'Campers', servicio_campers_sub:'Recreational vehicles',
-    plagas_title:'🎯 Pests we eliminate:',
-    plaga_cucarachas:'Cockroaches', plaga_hormigas:'Ants', plaga_roedores:'Rodents',
-    plaga_comejen:'Termites', plaga_moscas:'Flies & Mosquitoes', plaga_pulgas:'Fleas & Ticks', plaga_salamandras:'Salamanders & Iguanas',
-    
-    // About
-    nosotros_tag:'About Us', nosotros:'About Us', nosotros_sub:'Pest control experts <em>across the island</em>',
-    nosotros_text1:'Avilés Pest Control is a Puerto Rican company dedicated to providing professional, safe and effective pest control solutions. We serve all 78 municipalities of Puerto Rico with speed and commitment.',
-    nosotros_text2:'We have certified technicians and approved products that guarantee lasting results without compromising the health of your family or pets.',
-    mision:'🎯 Mission', mision_text:'Protect the health and peace of mind of our customers by providing reliable, responsible and accessible pest control services throughout Puerto Rico.',
-    vision:'🌟 Vision', vision_text:'To be the leading pest control company in Puerto Rico, recognized for service excellence, customer trust, and environmental commitment.',
-    municipios_cubiertos:'78 Municipalities<br/>Covered',
-    
-    // Testimonials
-    testimonios_tag:'Testimonials', testimonios:'What our clients say', testimonios_sub:'Customer satisfaction is our greatest reward.',
-    testimonial_1_name:'María Rodríguez', testimonial_1_place:'San Juan, PR', testimonial_1_text:'"Excellent service. They arrived on time, were very professional and the result was incredible. We have not seen a single cockroach since then. 100% recommended!"',
-    testimonial_2_name:'José López', testimonial_2_place:'Bayamón, PR', testimonial_2_text:'"I had a serious termite problem in my house and Avilés Pest Control resolved it completely. Very professional, fair prices and excellent customer service."',
-    testimonial_3_name:'Carmen Nieves', testimonial_3_place:'Ponce, PR', testimonial_3_text:'"I called for a rodent emergency in my restaurant and they responded within hours. They solved the problem quickly and discreetly. They are the best in Puerto Rico."',
-    
-    // FAQ
-    faq_tag:'FAQ', faq:'Frequently Asked Questions', faq_sub:'Here we answer our clients most common questions.',
-    faq1_q:'How long does the service take?', faq1_r:'Most treatments take between 30 minutes and 2 hours, depending on property size and pest type.',
-    faq2_q:'Are the products safe for my pets?', faq2_r:'Yes, we use biodegradable and pet-safe products. You can return home worry-free after treatment.',
-    faq3_q:'Do you offer a warranty?', faq3_r:'Yes, we offer a warranty on all our services. If pests return, we come back at no extra cost.',
-    faq4_q:'How much does an inspection cost?', faq4_r:'The first inspection is free. Call us to schedule your appointment today.',
-    
-    // Contact
-    contacto_tag:'Contact', contacto:'Contact', contacto_sub:'Write to us and we will respond soon',
-    form_nombre:'Your Name', form_email:'Email', form_tel:'Phone',
-    form_servicio:'Service Type', form_servicio_opt:'— Select service —',
-    form_pueblo:'Town *', form_pueblo_opt:'— Select town —',
-    form_mensaje:'Message', form_enviar:'Send Request →',
-    form_success:'✅ Request sent! We will contact you soon.',
-    servicio_residencial_opt:'Residential', servicio_comercial_opt:'Commercial', servicio_autos_opt:'Cars', servicio_botes_opt:'Boats / Campers',
-    
-    // Footer
-    footer_derechos:'© 2024 Avilés Pest Control. All rights reserved.',
-    cobertura_tag:'Coverage', cobertura_h2:'Service across <em>all Puerto Rico</em>', cobertura_lead:'We serve all 78 municipalities of Puerto Rico including Vieques and Culebra.',
-    mapa_label:'Total coverage: 78 municipalities including Vieques and Culebra',
-    faq_lead:'Here we answer our clients most common questions.',
-    contacto_cobertura_label:'Coverage', contacto_cobertura_value:'All of Puerto Rico',
-    contacto_horario_label:'Hours', contacto_horario_value:'Monday – Saturday: 7am – 7pm',
-    
-    // Form
-    form_alert:'Please complete all required fields (*)', form_sending:'Sending...', form_enviar_btn:'Send Request →',
-    
-    // Navigation
-    nav_inicio:'Home', nav_servicios:'Services', nav_nosotros:'About', nav_testimonios:'Testimonials', nav_faq:'FAQ', nav_cta:'Request Service →'
-  }
-};
-function applyLang(l) {
-  localStorage.setItem('lang', l);
-  document.querySelectorAll('.lang-label').forEach(el => el.textContent = texts[l].langLabel);
-  document.querySelectorAll('.lang-toggle').forEach(el => el.checked = (l==='en'));
-  document.querySelectorAll('#langLabel').forEach(el => el.textContent = (l==='en' ? '🇺🇸 English' : '🇵🇷 Español'));
-  
-  // Navigation
-  document.querySelectorAll('nav a[href="#inicio"]').forEach(el => el.textContent = texts[l].nav_inicio);
-  document.querySelectorAll('nav a[href="#servicios"]').forEach(el => el.textContent = texts[l].nav_servicios);
-  document.querySelectorAll('nav a[href="#nosotros"]').forEach(el => el.textContent = texts[l].nav_nosotros);
-  document.querySelectorAll('nav a[href="#testimonios"]').forEach(el => el.textContent = texts[l].nav_testimonios);
-  document.querySelectorAll('nav a[href="#faq"]').forEach(el => el.textContent = texts[l].nav_faq);
-  document.querySelectorAll('.nav-cta').forEach(el => el.textContent = texts[l].nav_cta);
-  
-  // Hero
-  document.querySelectorAll('.hero-badge').forEach(el => el.textContent = texts[l].hero_badge);
-  document.querySelectorAll('#inicio h1').forEach(el => el.innerHTML = texts[l].h1);
-  document.querySelectorAll('.hero-sub').forEach(el => el.textContent = texts[l].hero_sub);
-  document.querySelectorAll('.hero-btns .btn-primary').forEach(el => el.textContent = texts[l].cta);
-  document.querySelectorAll('.hero-btns .btn-outline').forEach(el => el.textContent = texts[l].call);
-  
-  // Stats
-  const statLabels = document.querySelectorAll('.stat-label');
-  if(statLabels[0]) statLabels[0].textContent = texts[l].stat_clientes;
-  if(statLabels[1]) statLabels[1].textContent = texts[l].stat_municipios;
-  if(statLabels[2]) statLabels[2].textContent = texts[l].stat_atencion;
-  
-  // Hero cards
-  const heroCards = document.querySelectorAll('.hero-card');
-  if(heroCards[0]) { heroCards[0].querySelector('h3').textContent = texts[l].card_residencial; heroCards[0].querySelector('p').textContent = texts[l].card_residencial_sub; }
-  if(heroCards[1]) { heroCards[1].querySelector('h3').textContent = texts[l].card_comercial; heroCards[1].querySelector('p').textContent = texts[l].card_comercial_sub; }
-  if(heroCards[2]) { heroCards[2].querySelector('h3').textContent = texts[l].card_autos; heroCards[2].querySelector('p').textContent = texts[l].card_autos_sub; }
-  if(heroCards[3]) { heroCards[3].querySelector('h3').textContent = texts[l].card_botes; heroCards[3].querySelector('p').textContent = texts[l].card_botes_sub; }
-  
-  // Services section
-  document.querySelectorAll('#servicios .section-tag').forEach(el => el.textContent = texts[l].servicios_tag);
-  document.querySelectorAll('#servicios h2').forEach(el => el.innerHTML = texts[l].servicios_sub);
-  document.querySelectorAll('#servicios .section-lead').forEach(el => el.textContent = texts[l].servicios_lead);
-  
-  const serviceCards = document.querySelectorAll('.service-card');
-  if(serviceCards[0]) { serviceCards[0].querySelector('h3').textContent = texts[l].servicio_residencial; serviceCards[0].querySelector('p').textContent = texts[l].servicio_residencial_sub; }
-  if(serviceCards[1]) { serviceCards[1].querySelector('h3').textContent = texts[l].servicio_comercial; serviceCards[1].querySelector('p').textContent = texts[l].servicio_comercial_sub; }
-  if(serviceCards[2]) { serviceCards[2].querySelector('h3').textContent = texts[l].servicio_autos; serviceCards[2].querySelector('p').textContent = texts[l].servicio_autos_sub; }
-  if(serviceCards[3]) { serviceCards[3].querySelector('h3').textContent = texts[l].servicio_botes; serviceCards[3].querySelector('p').textContent = texts[l].servicio_botes_sub; }
-  if(serviceCards[4]) { serviceCards[4].querySelector('h3').textContent = texts[l].servicio_campers; serviceCards[4].querySelector('p').textContent = texts[l].servicio_campers_sub; }
-  
-  // Plagas
-  document.querySelectorAll('.plagas-title').forEach(el => el.textContent = texts[l].plagas_title);
-  const plagaItems = document.querySelectorAll('.plaga-item');
-  if(plagaItems[0]) plagaItems[0].innerHTML = '🪳 ' + texts[l].plaga_cucarachas;
-  if(plagaItems[1]) plagaItems[1].innerHTML = '🐜 ' + texts[l].plaga_hormigas;
-  if(plagaItems[2]) plagaItems[2].innerHTML = '🐭 ' + texts[l].plaga_roedores;
-  if(plagaItems[3]) plagaItems[3].innerHTML = '🪲 ' + texts[l].plaga_comejen;
-  if(plagaItems[4]) plagaItems[4].innerHTML = '🦟 ' + texts[l].plaga_moscas;
-  if(plagaItems[5]) plagaItems[5].innerHTML = '🐾 ' + texts[l].plaga_pulgas;
-  if(plagaItems[6]) plagaItems[6].innerHTML = '🦎 ' + texts[l].plaga_salamandras;
-  
-  // About section
-  document.querySelectorAll('#nosotros .section-tag').forEach(el => el.textContent = texts[l].nosotros_tag);
-  document.querySelectorAll('#nosotros h2').forEach(el => el.innerHTML = texts[l].nosotros_sub);
-  const aboutTexts = document.querySelectorAll('#nosotros .about-text > p');
-  if(aboutTexts[0]) aboutTexts[0].textContent = texts[l].nosotros_text1;
-  if(aboutTexts[1]) aboutTexts[1].textContent = texts[l].nosotros_text2;
-  const mvCards = document.querySelectorAll('.mv-card');
-  if(mvCards[0]) mvCards[0].innerHTML = '<h4>' + texts[l].mision + '</h4><p>' + texts[l].mision_text + '</p>';
-  if(mvCards[1]) mvCards[1].innerHTML = '<h4>' + texts[l].vision + '</h4><p>' + texts[l].vision_text + '</p>';
-  document.querySelectorAll('.about-badge').forEach(el => el.innerHTML = texts[l].municipios_cubiertos);
-  
-  // Testimonials section
-  document.querySelectorAll('#testimonios .section-tag').forEach(el => el.textContent = texts[l].testimonios_tag);
-  document.querySelectorAll('#testimonios h2').forEach(el => el.innerHTML = texts[l].testimonios_sub);
-  document.querySelectorAll('#testimonios .section-lead').forEach(el => el.textContent = texts[l].testimonios_sub);
-  const testCards = document.querySelectorAll('.testimonial-card');
-  if(testCards[0]) { testCards[0].querySelector('.testimonial-text').textContent = texts[l].testimonial_1_text; testCards[0].querySelector('.author-name').textContent = texts[l].testimonial_1_name; testCards[0].querySelector('.author-place').textContent = texts[l].testimonial_1_place; }
-  if(testCards[1]) { testCards[1].querySelector('.testimonial-text').textContent = texts[l].testimonial_2_text; testCards[1].querySelector('.author-name').textContent = texts[l].testimonial_2_name; testCards[1].querySelector('.author-place').textContent = texts[l].testimonial_2_place; }
-  if(testCards[2]) { testCards[2].querySelector('.testimonial-text').textContent = texts[l].testimonial_3_text; testCards[2].querySelector('.author-name').textContent = texts[l].testimonial_3_name; testCards[2].querySelector('.author-place').textContent = texts[l].testimonial_3_place; }
-  
-  // FAQ section
-  document.querySelectorAll('#faq .section-tag').forEach(el => el.textContent = texts[l].faq_tag);
-  document.querySelectorAll('#faq h2').forEach(el => el.innerHTML = texts[l].faq_sub);
-  document.querySelectorAll('#faq .section-lead').forEach(el => el.textContent = texts[l].faq_sub);
-  const faqQs = document.querySelectorAll('.faq-q');
-  if(faqQs[0]) faqQs[0].textContent = texts[l].faq1_q;
-  if(faqQs[1]) faqQs[1].textContent = texts[l].faq2_q;
-  if(faqQs[2]) faqQs[2].textContent = texts[l].faq3_q;
-  if(faqQs[3]) faqQs[3].textContent = texts[l].faq4_q;
-  const faqRs = document.querySelectorAll('.faq-a p');
-  if(faqRs[0]) faqRs[0].textContent = texts[l].faq1_r;
-  if(faqRs[1]) faqRs[1].textContent = texts[l].faq2_r;
-  if(faqRs[2]) faqRs[2].textContent = texts[l].faq3_r;
-  if(faqRs[3]) faqRs[3].textContent = texts[l].faq4_r;
-  
-  // Contact section
-  document.querySelectorAll('#contacto .section-tag').forEach(el => el.textContent = texts[l].contacto_tag);
-  document.querySelectorAll('#contacto h2').forEach(el => el.innerHTML = texts[l].contacto_sub);
-  document.querySelectorAll('#contacto .section-lead').forEach(el => el.textContent = texts[l].contacto_sub);
-  document.querySelectorAll('label[for="fNombre"]').forEach(el => el.textContent = texts[l].form_nombre);
-  document.querySelectorAll('label[for="fEmail"]').forEach(el => el.textContent = texts[l].form_email);
-  document.querySelectorAll('label[for="fTel"]').forEach(el => el.textContent = texts[l].form_tel);
-  document.querySelectorAll('label[for="fServicio"]').forEach(el => el.textContent = texts[l].form_servicio);
-  document.querySelectorAll('label[for="fPueblo"]').forEach(el => el.textContent = texts[l].form_pueblo);
-  document.querySelectorAll('label[for="fMensaje"]').forEach(el => el.textContent = texts[l].form_mensaje);
-  document.querySelectorAll('.form-submit').forEach(el => el.textContent = texts[l].form_enviar);
-  document.querySelectorAll('#fNombre').forEach(el => el.placeholder = texts[l].form_nombre);
-  document.querySelectorAll('#fEmail').forEach(el => el.placeholder = texts[l].form_email);
-  document.querySelectorAll('#fTel').forEach(el => el.placeholder = texts[l].form_tel);
-  document.querySelectorAll('#fMensaje').forEach(el => el.placeholder = texts[l].form_mensaje);
-  document.querySelectorAll('#fServicio option:first-child').forEach(el => el.textContent = texts[l].form_servicio_opt);
-  document.querySelectorAll('#fPueblo option:first-child').forEach(el => el.textContent = texts[l].form_pueblo_opt);
-  
-  // Footer
-  document.querySelectorAll('.footer-bottom p').forEach(el => el.textContent = texts[l].footer_derechos);
-  
-  // Cobertura / Map section
-  document.querySelectorAll('#mapa .section-tag').forEach(el => el.textContent = texts[l].cobertura_tag);
-  document.querySelectorAll('#mapa h2').forEach(el => el.innerHTML = texts[l].cobertura_h2);
-  document.querySelectorAll('#mapa .section-lead').forEach(el => el.textContent = texts[l].cobertura_lead);
-  document.querySelectorAll('.map-label').forEach(el => el.textContent = texts[l].mapa_label);
-  
-  // FAQ section
-  document.querySelectorAll('#faq .section-lead').forEach(el => el.textContent = texts[l].faq_lead);
-  
-  // Contact section info
-  document.querySelectorAll('.cobertura-label').forEach(el => el.textContent = texts[l].contacto_cobertura_label);
-  document.querySelectorAll('.cobertura-value').forEach(el => el.textContent = texts[l].contacto_cobertura_value);
-  document.querySelectorAll('.horario-label').forEach(el => el.textContent = texts[l].contacto_horario_label);
-  document.querySelectorAll('.horario-value').forEach(el => el.textContent = texts[l].contacto_horario_value);
-  
-  // Mobile menu links
-  document.querySelectorAll('.mobile-menu a[href="#inicio"]').forEach(el => el.textContent = texts[l].nav_inicio);
-  document.querySelectorAll('.mobile-menu a[href="#servicios"]').forEach(el => el.textContent = texts[l].nav_servicios);
-  document.querySelectorAll('.mobile-menu a[href="#nosotros"]').forEach(el => el.textContent = texts[l].nav_nosotros);
-  document.querySelectorAll('.mobile-menu a[href="#testimonios"]').forEach(el => el.textContent = texts[l].nav_testimonios);
-  document.querySelectorAll('.mobile-menu a[href="#faq"]').forEach(el => el.textContent = texts[l].nav_faq);
-  document.querySelectorAll('.mobile-menu a[href="#contacto"]').forEach(el => el.textContent = texts[l].nav_cta);
-}
-applyLang(state.lang);
-
-// ─── HAMBURGER / DROPDOWN ───
-const ham = document.getElementById('hamburgerBtn');
-const menu = document.getElementById('mobileMenu');
-const dropdown = document.getElementById('dropdownMenu');
-const dashBtn = document.getElementById('dashBtn');
-
-ham.addEventListener('click', (e) => {
-  e.stopPropagation();
-  dropdown.classList.toggle('open');
-});
-
-document.addEventListener('click', (e) => {
-  if (!dropdown.contains(e.target)) {
-    dropdown.classList.remove('open');
-  }
-});
-
-dashBtn.addEventListener('click', () => {
-  dropdown.classList.remove('open');
-  openDash();
-});
-
-// Theme toggle handlers for dropdown
-document.querySelectorAll('.theme-toggle').forEach(el => {
-  el.addEventListener('change', e => {
-    applyTheme(e.target.checked ? 'dark' : 'light');
-  });
-});
-
-// Lang toggle handlers for dropdown
-document.querySelectorAll('.lang-toggle').forEach(el => {
-  el.addEventListener('change', e => {
-    applyLang(e.target.checked ? 'en' : 'es');
-  });
-});
-
-document.querySelectorAll('.menu-link').forEach(a => a.addEventListener('click', () => {
-  menu.classList.remove('open');
-  ham.children[0].style.transform = '';
-  ham.children[1].style.opacity = '1';
-  ham.children[2].style.transform = '';
-  document.body.style.overflow = '';
-}));
-
-// ─── SCROLL REVEAL ───
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(e => { if(e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }});
-}, {threshold:0.1});
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-// ─── FAQ ───
-document.querySelectorAll('.faq-q').forEach(btn => btn.addEventListener('click', () => {
-  const item = btn.closest('.faq-item');
-  const wasOpen = item.classList.contains('open');
-  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-  if (!wasOpen) item.classList.add('open');
-}));
-
-// ─── FORM ───
-document.getElementById('contactForm').addEventListener('submit', e => {
-  e.preventDefault();
-  const nom = document.getElementById('fNombre').value.trim();
-  const tel = document.getElementById('fTel').value.trim();
-  const srv = document.getElementById('fServicio').value;
-  const pue = document.getElementById('fPueblo').value;
-  const currentLang = localStorage.getItem('lang') || 'es';
-  if (!nom || !tel || !srv || !pue) {
-    alert(texts[currentLang].form_alert);
-    return;
-  }
-  const btn = e.target.querySelector('.form-submit');
-  btn.textContent = texts[currentLang].form_sending;
-  btn.disabled = true;
-  setTimeout(() => {
-    btn.textContent = texts[currentLang].form_enviar_btn;
-    btn.disabled = false;
-    document.getElementById('formSuccess').style.display = 'block';
-    e.target.reset();
-    setTimeout(() => document.getElementById('formSuccess').style.display = 'none', 5000);
-  }, 1200);
-});
-
-// ─── DASHBOARD ───
-function openDash() { document.getElementById('dashModal').classList.add('open'); document.body.style.overflow='hidden'; }
-function closeDash() { document.getElementById('dashModal').classList.remove('open'); document.body.style.overflow=''; }
-document.getElementById('dashBtnMobile').addEventListener('click', () => { menu.classList.remove('open'); openDash(); });
-document.getElementById('dashModal').addEventListener('click', e => { if(e.target===document.getElementById('dashModal')) closeDash(); });
-document.addEventListener('keydown', e => { if(e.key==='Escape') closeDash(); });
-
-function doLogin() {
-  const u = document.getElementById('loginUser').value;
-  const p = document.getElementById('loginPass').value;
-  if (u==='admin' && p==='aviles2026') {
-    document.getElementById('loginPanel').style.display='none';
-    document.getElementById('dashPanel').style.display='block';
-    state.loggedIn = true;
-    renderPlagaList();
-    renderTestList();
-  } else {
-    document.getElementById('loginErr').style.display='block';
-    setTimeout(() => document.getElementById('loginErr').style.display='none', 3000);
-  }
-}
-function doLogout() {
-  document.getElementById('loginPanel').style.display='block';
-  document.getElementById('dashPanel').style.display='none';
-  document.getElementById('loginUser').value='';
-  document.getElementById('loginPass').value='';
-}
-function showTab(id) {
-  document.querySelectorAll('.dash-panel').forEach(p => p.classList.remove('active'));
-  document.querySelectorAll('.dash-nav button').forEach(b => b.classList.remove('active'));
-  document.getElementById('tab-'+id).classList.add('active');
-  event.target.classList.add('active');
-}
-function saveTel() {
-  state.contact.tel1 = document.getElementById('dash-tel1').value;
-  state.contact.tel2 = document.getElementById('dash-tel2').value;
-  const msg = document.getElementById('telSaveMsg');
-  msg.style.display='block'; setTimeout(()=>msg.style.display='none',2500);
-}
-function saveEmail() {
-  state.contact.email = document.getElementById('dash-email').value;
-  const msg = document.getElementById('emailSaveMsg');
-  msg.style.display='block'; setTimeout(()=>msg.style.display='none',2500);
-}
-
-// Plagas
-const plagaIcons = ['🪳','🐜','🐭','🪲','🦟','🐾','🦎','🐝','🕷️','🪰'];
-function renderPlagaList() {
-  const el = document.getElementById('plagaList');
-  el.innerHTML = state.plagas.map((p,i) => `<div class="item-row"><span>${plagaIcons[i%plagaIcons.length]} ${p}</span><div class="item-actions"><button class="btn-sm btn-danger" onclick="removePlaga(${i})">🗑</button></div></div>`).join('');
-}
-function addPlaga() {
-  const v = document.getElementById('newPlaga').value.trim();
-  if (!v) return;
-  state.plagas.push(v);
-  document.getElementById('newPlaga').value='';
-  renderPlagaList();
-  // Update main page
-  const icons = ['🪳','🐜','🐭','🪲','🦟','🐾','🦎','🐝','🕷️','🪰'];
-  document.getElementById('plagasGrid').innerHTML = state.plagas.map((p,i) =>
-    `<div class="plaga-item"><span class="plaga-icon">${icons[i%icons.length]}</span>${p}</div>`).join('');
-}
-function removePlaga(i) { state.plagas.splice(i,1); renderPlagaList(); }
-
-// Testimonials
-function renderTestList() {
-  const el = document.getElementById('testList');
-  el.innerHTML = state.testimonials.map((t,i) => `<div class="item-row"><span><strong>${t.name}</strong> – ${t.place}</span><div class="item-actions"><button class="btn-sm btn-danger" onclick="removeTest(${i})">🗑</button></div></div>`).join('');
-}
-function addTestimonial() {
-  const name = document.getElementById('newTestName').value.trim();
-  const place = document.getElementById('newTestPlace').value.trim();
-  const text = document.getElementById('newTestText').value.trim();
-  if (!name || !text) return;
-  state.testimonials.push({name, place, text:`"${text}"`});
-  document.getElementById('newTestName').value='';
-  document.getElementById('newTestPlace').value='';
-  document.getElementById('newTestText').value='';
-  renderTestList();
-  // Update main page
-  const initials = n => n.split(' ').map(w=>w[0]).join('').toUpperCase().slice(0,2);
-  document.getElementById('testimonialsGrid').innerHTML = state.testimonials.map(t => `
-    <div class="testimonial-card">
-      <div class="stars">★★★★★</div>
-      <p class="testimonial-text">${t.text}</p>
-      <div class="testimonial-author">
-        <div class="author-avatar">${initials(t.name)}</div>
-        <div><div class="author-name">${t.name}</div><div class="author-place">${t.place}</div></div>
-      </div>
-    </div>`).join('');
-}
-function removeTest(i) {
-  state.testimonials.splice(i,1);
-  renderTestList();
-}
-
-// Login on Enter
-document.getElementById('loginPass').addEventListener('keydown', e => { if(e.key==='Enter') doLogin(); });
-</script>
+<script src="script.js"></script>
 </body>
 </html>
